@@ -1,0 +1,118 @@
+.top-nav{
+    position: absolute;
+    width: 100%;
+    color: var(--main-white);
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-top: 2%;
+ 
+}
+.top-nav img{
+    width: 80px;
+}
+.top-nav .container{
+width: 80%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+.top-nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.top-nav ul li{
+    margin-left: 15px;
+    cursor: pointer;
+}
+.top-nav ul a{
+ text-decoration: none;
+ color: var(--main-white);
+ transition: 500ms;
+}
+.top-nav ul a:hover{
+   transform: scale(1.5);
+   color: var(--dark-blue);
+   }
+.nav-scroll{
+background-color: var(--main-white);
+color: var(--dark-blue);
+}
+.mobile-menu{
+    display: none;
+    top: 12px;
+    right: 5px;
+    position: absolute;
+}
+
+@keyframes falldown{
+    from{height: 0vh;}
+    to{height: 100vh;}
+}
+@media only screen and (max-width:640px){
+    .top-nav nav{
+        display: none;
+    }
+    .top-nav{
+        top: 0;
+        background-color: var(--dark-blue);
+    }
+    .top-nav img{
+        width: 60px;
+    }
+    .top-nav .container{
+        width: 90%;
+        flex-direction: column;
+        
+        justify-content: normal;
+        align-items: stretch;
+        }
+        .nav{
+           
+            animation: falldown 500ms;
+          
+        }
+        .top-nav ul{
+            flex-direction: column; 
+            text-align: center;
+           
+        }
+        .top-nav ul li{
+            margin: 35px 0px 0px 0px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--main-white);
+            width: 90%;
+            
+        }
+        .nav-scroll{
+            
+            color: var(--main-white);
+            }
+        .mobile-menu{
+            display: block;
+            height: 34px;
+            width: 34px;
+            margin: 0px 15px;
+            padding: 0;
+            
+            text-transform: uppercase;
+            text-decoration: none;
+            /* white-space: nowrap; */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        .mobile-menu hr{
+           margin-bottom: 5px ;
+           
+        }
+        .display-menu{
+            display: block !important;
+            height: 100vh;
+                }
+}
